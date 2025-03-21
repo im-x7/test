@@ -1,0 +1,77 @@
+// 颜色变量
+$primary-color: var(--td-brand-color);
+$success-color: var(--td-success-color);
+$warning-color: var(--td-warning-color);
+$error-color: var(--td-error-color);
+
+// 文字颜色
+$text-color-primary: var(--td-text-color-primary);
+$text-color-secondary: var(--td-text-color-secondary);
+$text-color-disabled: var(--td-text-color-disabled);
+
+// 背景颜色
+$bg-color-container: var(--td-bg-color-container);
+$bg-color-page: var(--td-bg-color-page);
+
+// 边框颜色
+$border-color: var(--td-border-color);
+
+// 字体大小
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-large: 16px;
+
+// 间距
+$spacing-mini: 4px;
+$spacing-small: 8px;
+$spacing-base: 16px;
+$spacing-large: 24px;
+$spacing-extra-large: 32px;
+
+// 圆角
+$border-radius-small: 2px;
+$border-radius-base: 4px;
+$border-radius-large: 8px;
+
+// 阴影
+$shadow-1: 0 2px 8px rgba(0, 0, 0, 0.15);
+$shadow-2: 0 4px 16px rgba(0, 0, 0, 0.15);
+$shadow-3: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+// 过渡
+$transition-duration: 0.3s;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// 响应式断点
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+
+// 混合器
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin multi-ellipsis($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+@mixin responsive($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+} 
