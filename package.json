@@ -17,9 +17,8 @@
     "format": "prettier --write src/",
     "type-check": "vue-tsc --noEmit",
     "test:unit": "vitest",
-    "postinstall": "husky",
-    "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
